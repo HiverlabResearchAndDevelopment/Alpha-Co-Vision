@@ -40,7 +40,7 @@ def generate_response(caption, previous_response, previous_responses):
     response = co.generate(
         model="command-xlarge-beta",
         prompt=prompt,
-        max_tokens= 30,
+        max_tokens= 200,
         temperature=0.60,
         k=0,
         stop_sequences=[],
@@ -52,5 +52,7 @@ def generate_response(caption, previous_response, previous_responses):
     for past_response in previous_responses:
         if check_similarity(new_response, past_response) > similarity_threshold:
             return generate_response(caption, previous_response, previous_responses)
+        else:
+            print("[LOG] IMAGE TOO SIMILAR\n")
 
     return new_response
