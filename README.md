@@ -26,6 +26,11 @@ This was hacked in a couple of nights and maybe optimized incorrectly/poorly. M
 - `transformers`
 - `OpenAI (optional)`
 
+Note: This version is currently using Ian's free cohere AI API key. 
+If it ceases to work, generate your own key using the link in the Cohere AI section, 
+and replace it in the `config.py` file.
+
+
 ## ⬆️ Recent Updates
 - Reduced repetition: By maintaining a list of previous responses and checking the similarity between new responses and past responses, the bot is less likely to repeat itself, resulting in a more engaging and natural conversation.
 - Improved conversation quality: The updated prompt with more examples and clearer instructions helps the model understand the task better, leading to more relevant and context-aware responses.
