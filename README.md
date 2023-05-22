@@ -18,7 +18,7 @@ This was hacked in a couple of nights and maybe optimized incorrectly/poorly. M
 
 ## Requirements
 
-- Python 3.7 or higher
+- Python 3.7 or higher (hiverlab: Currently using python 3.10.11 installed with pyenv with venv for virtual environment)
 - `cohere`
 - `opencv-python`
 - `Pillow`
