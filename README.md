@@ -6,6 +6,18 @@
 A real-time video-to-text bot that captures frames generates captions and creates conversational responses using a Large Language Models base to create interactive video descriptions.
 Powered by BLIP (Bootstrapping Language-Image Pre-training) and Cohere AI, this bot is capable of unified vision-language understanding and generation using transformers.
 
+## Hiverlab Modifications
+
+- Using Python 3.10.11 installed with pyenv with venv for virtual environment, not python 3.7
+- Made the caption generation by pressing `P` (for "photo")
+- Increase tokens (words) generated from 30 -> 200
+- The output prints to terminal, but only accepts keyboard input when the video feed is selected
+- Prints `[LOG] IMAGE TOO SIMILAR` to show user that computer doesn't want to generate caption
+- Note: This version is currently using Ian's free trial cohere AI API key. 
+If it ceases to work, generate your own key using the link in the [Cohere AI](#Cohere-AI) section, 
+and replace it in the `config.py` file.
+
+
 ## Description:
 
 Alpha-Co-Vision is the first step in a series of upcoming projects focused on real-time generations to ultimately create a Pet-Toy-Robot capable of understanding its environment to better interact with humans.
@@ -26,10 +38,6 @@ This was hacked in a couple of nights and maybe optimized incorrectly/poorly. M
 - `transformers`
 - `OpenAI (optional)`
 
-Note: This version is currently using Ian's free cohere AI API key. 
-If it ceases to work, generate your own key using the link in the Cohere AI section, 
-and replace it in the `config.py` file.
-
 
 ## ⬆️ Recent Updates
 - Reduced repetition: By maintaining a list of previous responses and checking the similarity between new responses and past responses, the bot is less likely to repeat itself, resulting in a more engaging and natural conversation.
@@ -47,7 +55,9 @@ You can install the required packages using the following command:
 
 - BLIP on Hugging Face: [🔗](https://huggingface.co/spaces/Salesforce/BLIP)
 
-## Cohere AI: [🔗](https://cohere.ai/) 
+## Cohere AI
+
+[🔗](https://cohere.ai/) 
 
 - Get Your Cohere AI API Key Here 👉 https://dashboard.cohere.ai/api-keys
 - Try Cohere's Playground Here 👉 https://dashboard.cohere.ai/playground/generate
